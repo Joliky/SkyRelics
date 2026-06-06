@@ -1,0 +1,179 @@
+cooldowns:
+  hero_cooldown: 600000
+  relic_cooldown: 10000
+
+items:
+  chrono_pickaxe:
+    material: DIAMOND_PICKAXE
+    name: "&b&lChrono Pickaxe"
+    lore:
+      - "&7Shift + ПКМ - переключить зачарование"
+      - "&eУдача III &7<-> &bШелковое касание"
+    unbreakable: true
+    enchantments:
+      LOOT_BONUS_BLOCKS: 3
+      DIG_SPEED: 5
+    abilities:
+      shift-right-click:
+        - type: TOGGLE_ENCHANT
+          first-enchant: LOOT_BONUS_BLOCKS
+          first-level: 3
+          second-enchant: SILK_TOUCH
+          second-level: 1
+          first-message: "&aКирка переключена на &eУдачу III&a."
+          second-message: "&aКирка переключена на &bШелковое касание&a."
+        - type: SOUND
+          sound: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 1.0
+          pitch: 1.2
+
+  wind_blade:
+    material: IRON_SWORD
+    name: "&f&lКлинок ветра"
+    lore:
+      - "&7ПКМ - рывок вперед"
+      - "&7Дает скорость после рывка"
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 3
+      DURABILITY: 3
+    abilities:
+      right-click:
+        - type: DASH
+          cooldown: 7000
+          power: 1.7
+          y: 0.35
+          message: "&fВетер подхватил тебя вперед."
+        - type: POTION_EFFECTS
+          effects:
+            - type: SPEED
+              duration: 100
+              amplifier: 1
+        - type: PARTICLE
+          particle: CLOUD
+          count: 35
+          y-offset: 0.8
+          offset-x: 0.35
+          offset-y: 0.15
+          offset-z: 0.35
+          speed: 0.08
+
+  blink_pearl:
+    material: ENDER_PEARL
+    name: "&5&lЖемчуг скачка"
+    lore:
+      - "&7ПКМ - телепорт к блоку в прицеле"
+      - "&7Дальность: &d35 блоков"
+    abilities:
+      right-click:
+        - type: TELEPORT_TARGET
+          cooldown: 12000
+          distance: 35
+        - type: SOUND
+          sound: ENTITY_ENDERMAN_TELEPORT
+          volume: 1.0
+          pitch: 1.0
+        - type: PARTICLE
+          particle: PORTAL
+          count: 60
+          y-offset: 1.0
+          offset-x: 0.5
+          offset-y: 0.5
+          offset-z: 0.5
+          speed: 0.1
+
+  storm_staff:
+    material: BLAZE_ROD
+    name: "&e&lПосох грозы"
+    lore:
+      - "&7ПКМ - удар молнии по блоку в прицеле"
+      - "&7Молния декоративная, без урона"
+    enchantments:
+      DURABILITY: 1
+    abilities:
+      right-click:
+        - type: LIGHTNING_TARGET
+          cooldown: 15000
+          distance: 45
+          damage: false
+          message: "&eНебо ответило искрой."
+        - type: SOUND
+          sound: ENTITY_LIGHTNING_BOLT_THUNDER
+          volume: 0.8
+          pitch: 1.3
+
+  life_amulet:
+    material: EMERALD
+    name: "&a&lАмулет жизни"
+    lore:
+      - "&7ПКМ - восстановить здоровье и сытость"
+      - "&7Также дает регенерацию"
+    abilities:
+      right-click:
+        - type: HEAL
+          cooldown: 20000
+          health: 6.0
+          food: 6
+          message: "&aАмулет наполнил тебя жизнью."
+        - type: POTION_EFFECTS
+          effects:
+            - type: REGENERATION
+              duration: 100
+              amplifier: 1
+        - type: PARTICLE
+          particle: VILLAGER_HAPPY
+          count: 25
+          y-offset: 1.0
+          offset-x: 0.5
+          offset-y: 0.5
+          offset-z: 0.5
+          speed: 0.03
+
+relic:
+  material: DIAMOND
+  name: "&6&lХроно-реликвия"
+  lore:
+    - "&7Осколок древнего времени."
+    - "&7Внутри слышен тихий ход часов."
+    - "&eShift + ПКМ &7- сменить режим"
+    - "&eПКМ &7- использовать силу реликвии"
+  consume-on-use: false
+
+titles:
+  summon:
+    title: "&4&lХеробрин"
+    subtitle: "&cДревний ритуал завершен"
+    fadeIn: 10
+    stay: 80
+    fadeOut: 30
+
+sounds:
+  summon:
+    sound: "entity.ender_dragon.growl"
+    volume: 1.0
+    pitch: 0.8
+
+permissions:
+  herobrine: "skyrelics.herobrine.summoner"
+
+messages:
+  no-permission: "&cУ тебя нет прав на это действие."
+  usage: "&eИспользование: /sr give <player> <item_id> [amount], /sr list, /sr reload"
+  unknown-command: "&cНеизвестная команда. Напиши &e/sr help&c."
+  player-not-found: "&cИгрок не найден."
+  item-create-error: "&cНе удалось создать предмет."
+  item-given: "&aТы получил предмет &e{item}&a x{amount}."
+  item-given-sender: "&aПредмет &e{item}&a x{amount} выдан игроку &e{player}&a."
+  item-not-found: "&cПредмет &e{item}&c не найден в config.yml."
+  item-list: "&aДоступные предметы: &e{items}"
+  item-list-empty: "&cВ config.yml нет настроенных предметов."
+  item-cooldown: "&cПредмет перезаряжается. Осталось: {seconds} сек."
+  config-reloaded: "&aКонфиг SkyRelics перезагружен."
+  ritual-lightning: "&5Череп пробудил древнюю молнию."
+  hero_already_summoned: "&cТы уже завершал ритуал Херобрина."
+  hero_spawn: "&cРитуал еще не восстановил силу. Осталось: "
+  hero_spawn_chat: "&4Херобрин услышал зов ритуала."
+  relic-mode: "&eРежим реликвии: &6{mode}"
+  relic-cooldown: "&cРеликвия перезаряжается. Осталось: {seconds} сек."
+  relic-used: "&aХроно-реликвия высвободила силу времени."
+  teleport-no-target: "&cРеликвия не нашла точку для переноса."

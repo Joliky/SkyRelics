@@ -1,0 +1,29 @@
+name: SkyRelics
+version: 1.0
+main: me.jolikki.skyrelics.SkyRelics
+api-version: 1.16
+author: jolikki
+softdepend:
+  - LuckPerms
+
+commands:
+  skyrelics:
+    description: Manage SkyRelics items and relic powers
+    usage: /skyrelics <help|list|give|reload>
+    aliases:
+      - sr
+    permission: skyrelics.command
+
+permissions:
+  skyrelics.command:
+    description: Allows using the /skyrelics command
+    default: op
+  skyrelics.command.give:
+    description: Allows giving SkyRelics items
+    default: op
+  skyrelics.command.reload:
+    description: Allows reloading SkyRelics config
+    default: op
+  skyrelics.herobrine.summoner:
+    description: Marks a player who has already summoned Herobrine
+    default: false
