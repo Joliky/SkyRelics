@@ -402,6 +402,620 @@ items:
           duration: 120
           amplifier: 0
 
+  novice_pickaxe:
+    material: WOODEN_PICKAXE
+    name: "&f&lКирка &eНовичка"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eмягкий старт шахтера&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 1
+      DURABILITY: 1
+    abilities:
+      break-block:
+        - type: ORE_MAGNET
+          radius: 4
+        - type: REPAIR_ON_ORE
+          repair: 1
+
+  novice_axe:
+    material: WOODEN_AXE
+    name: "&f&lТопор &eНовичка"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eровная рубка древесины&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 1
+      DURABILITY: 1
+    abilities:
+      break-block:
+        - type: TREE_FELLER
+          max-blocks: 16
+        - type: LOG_SPLINTER
+          chance: 0.08
+          drop: STICK
+          amount: 1
+
+  novice_shovel:
+    material: WOODEN_SHOVEL
+    name: "&f&lЛопата &eНовичка"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eчистая земляная работа&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 1
+      DURABILITY: 1
+    abilities:
+      break-block:
+        - type: RESOURCE_SWEEP
+          radius: 4
+      right-click:
+        - type: PATH_MAKER
+          cooldown: 4000
+          length: 4
+
+  novice_hoe:
+    material: WOODEN_HOE
+    name: "&f&lМотыга &eНовичка"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eбережный сбор урожая&f."
+    unbreakable: true
+    enchantments:
+      DURABILITY: 1
+    abilities:
+      break-block:
+        - type: REPLANT
+        - type: COMPOST_TOUCH
+          chance: 0.06
+          drop: BONE_MEAL
+          amount: 1
+
+  novice_sword:
+    material: WOODEN_SWORD
+    name: "&f&lКлинок &eНовичка"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eпервый точный удар&f."
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 1
+      DURABILITY: 1
+    abilities:
+      attack-entity:
+        - type: FIRE_SLASH
+          chance: 0.08
+          fire-ticks: 40
+        - type: VAMPIRIC_HIT
+          percent: 0.06
+
+  stone_pickaxe:
+    material: STONE_PICKAXE
+    name: "&f&lКирка &eКамня"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eустойчивый проход в породе&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 2
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: VEIN_MINE
+          max-blocks: 8
+        - type: STONE_SKIN
+          cooldown: 14000
+          duration: 80
+          amplifier: 0
+
+  stone_axe:
+    material: STONE_AXE
+    name: "&f&lТопор &eКамня"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eтяжелый скол коры&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 2
+      DAMAGE_ALL: 1
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: TREE_FELLER
+          max-blocks: 24
+      attack-entity:
+        - type: ARMOR_CRACK
+          chance: 0.12
+          duration: 60
+          amplifier: 0
+
+  stone_shovel:
+    material: STONE_SHOVEL
+    name: "&f&lЛопата &eКамня"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eплотная земляная волна&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 2
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: DIG_3X3
+          cooldown: 9000
+          radius: 1
+          max-blocks: 5
+      right-click:
+        - type: SAND_WAVE
+          cooldown: 12000
+          radius: 4
+          power: 0.8
+          duration: 40
+
+  stone_hoe:
+    material: STONE_HOE
+    name: "&f&lМотыга &eКамня"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eровные грядки&f."
+    unbreakable: true
+    enchantments:
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: HARVEST_RADIUS
+          radius: 2
+        - type: FARMER_LUCK
+          chance: 0.08
+          drop: WHEAT
+          amount: 1
+
+  stone_sword:
+    material: STONE_SWORD
+    name: "&f&lКлинок &eКамня"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eсбивающий удар&f."
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 2
+      DURABILITY: 2
+    abilities:
+      attack-entity:
+        - type: ICE_SLASH
+          chance: 0.1
+          duration: 60
+          amplifier: 0
+        - type: AOE_SWEEP
+          cooldown: 10000
+          radius: 2
+          percent: 0.35
+
+  iron_pickaxe:
+    material: IRON_PICKAXE
+    name: "&f&lКирка &eЖелеза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eнадежная добыча руды&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 3
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: VEIN_MINE
+          max-blocks: 12
+        - type: AUTO_SMELT
+          chance: 0.25
+
+  iron_axe:
+    material: IRON_AXE
+    name: "&f&lТопор &eЖелеза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eбоевой раскол&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 3
+      DAMAGE_ALL: 2
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: TREE_FELLER
+          max-blocks: 36
+      attack-entity:
+        - type: BLEEDING_STRIKE
+          chance: 0.16
+          ticks: 3
+          damage: 0.75
+
+  iron_shovel:
+    material: IRON_SHOVEL
+    name: "&f&lЛопата &eЖелеза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eширокий зачистной взмах&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 3
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: DIG_3X3
+          cooldown: 8000
+          radius: 1
+          max-blocks: 7
+        - type: RESOURCE_SWEEP
+          radius: 6
+
+  iron_hoe:
+    material: IRON_HOE
+    name: "&f&lМотыга &eЖелеза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eбыстрый уход за полем&f."
+    unbreakable: true
+    enchantments:
+      DURABILITY: 2
+    abilities:
+      break-block:
+        - type: HARVEST_RADIUS
+          radius: 3
+        - type: REPLANT
+      right-click:
+        - type: GROWTH_AURA
+          cooldown: 14000
+          radius: 3
+          growth: 1
+
+  iron_sword:
+    material: IRON_SWORD
+    name: "&f&lКлинок &eЖелеза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eчестный рыцарский натиск&f."
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 3
+      DURABILITY: 2
+    abilities:
+      attack-entity:
+        - type: CRITICAL_DASH
+          cooldown: 9000
+          power: 1.1
+          damage-multiplier: 1.1
+        - type: COMBO_STRIKE
+          trigger: 4
+          multiplier: 1.4
+          keep-ms: 5000
+
+  golden_pickaxe:
+    material: GOLDEN_PICKAXE
+    name: "&f&lКирка &eСолнца"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eсияющий рудный всплеск&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: TREASURE_CHANCE
+          chance: 0.05
+          drop: EXPERIENCE_BOTTLE
+          amount: 1
+        - type: FORTUNE_SURGE
+          chance: 0.16
+          bonus: 1
+
+  golden_axe:
+    material: GOLDEN_AXE
+    name: "&f&lТопор &eСолнца"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eяростный золотой размах&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DAMAGE_ALL: 3
+      DURABILITY: 3
+    abilities:
+      attack-entity:
+        - type: RAGE_STACKS
+          max-stacks: 4
+          damage-per-stack: 0.25
+          keep-ms: 5000
+        - type: SHIELD_BREAKER
+          multiplier: 1.25
+          shield-cooldown: 80
+
+  golden_shovel:
+    material: GOLDEN_SHOVEL
+    name: "&f&lЛопата &eСолнца"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eпесчаный солнечный след&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DURABILITY: 3
+    abilities:
+      right-click:
+        - type: BURROW
+          cooldown: 10000
+          distance: 5
+        - type: QUICKSAND_TRAP
+          cooldown: 16000
+          radius: 3
+          duration: 80
+          amplifier: 1
+
+  golden_hoe:
+    material: GOLDEN_HOE
+    name: "&f&lМотыга &eСолнца"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eтеплый рост посевов&f."
+    unbreakable: true
+    enchantments:
+      DURABILITY: 3
+    abilities:
+      right-click:
+        - type: GROWTH_AURA
+          cooldown: 10000
+          radius: 4
+          growth: 2
+        - type: LIFE_BLOOM
+          cooldown: 22000
+          radius: 4
+          pulses: 4
+          health: 1.0
+
+  golden_sword:
+    material: GOLDEN_SWORD
+    name: "&f&lКлинок &eСолнца"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eпылающий светлый удар&f."
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 3
+      FIRE_ASPECT: 1
+      DURABILITY: 3
+    abilities:
+      attack-entity:
+        - type: FIRE_SLASH
+          chance: 0.18
+          fire-ticks: 80
+        - type: FEAR
+          chance: 0.08
+          duration: 60
+          power: 0.6
+
+  diamond_pickaxe:
+    material: DIAMOND_PICKAXE
+    name: "&f&lКирка &eАлмаза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eглубокая шахтерская мощь&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      LOOT_BONUS_BLOCKS: 2
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: VEIN_MINE
+          max-blocks: 18
+        - type: TUNNEL_BREAK
+          cooldown: 9000
+          radius: 1
+          max-blocks: 8
+
+  diamond_axe:
+    material: DIAMOND_AXE
+    name: "&f&lТопор &eАлмаза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eидеальный лесной срез&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DAMAGE_ALL: 4
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: TREE_FELLER
+          max-blocks: 64
+      attack-entity:
+        - type: EXECUTE
+          health-percent: 0.22
+          multiplier: 1.5
+
+  diamond_shovel:
+    material: DIAMOND_SHOVEL
+    name: "&f&lЛопата &eАлмаза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eалмазная расчистка&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: AREA_BREAK
+          cooldown: 7000
+          radius: 1
+          max-blocks: 8
+      right-click:
+        - type: EARTH_WALL
+          cooldown: 18000
+          width: 3
+          height: 2
+          duration: 100
+          material: COBBLESTONE
+
+  diamond_hoe:
+    material: DIAMOND_HOE
+    name: "&f&lМотыга &eАлмаза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eживое поле под рукой&f."
+    unbreakable: true
+    enchantments:
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: HARVEST_RADIUS
+          radius: 4
+        - type: FARMER_LUCK
+          chance: 0.14
+          drop: WHEAT
+          amount: 2
+      right-click:
+        - type: NATURE_HEAL
+          cooldown: 10000
+          radius: 5
+          health: 2.0
+
+  diamond_sword:
+    material: DIAMOND_SWORD
+    name: "&f&lКлинок &eАлмаза"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eточная дуэльная серия&f."
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 4
+      DURABILITY: 3
+    abilities:
+      attack-entity:
+        - type: MARK_TARGET
+          cooldown: 9000
+          multiplier: 1.2
+          duration-ms: 6000
+        - type: AOE_SWEEP
+          cooldown: 9000
+          radius: 3
+          percent: 0.45
+
+  netherite_pickaxe:
+    material: NETHERITE_PICKAXE
+    name: "&f&lКирка &eНезерита"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eпредельная добыча глубин&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      LOOT_BONUS_BLOCKS: 3
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: VEIN_MINE
+          max-blocks: 24
+        - type: EXPLOSIVE_MINE
+          cooldown: 16000
+          power: 1.0
+          break-blocks: false
+
+  netherite_axe:
+    material: NETHERITE_AXE
+    name: "&f&lТопор &eНезерита"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eсокрушительный черный разруб&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DAMAGE_ALL: 5
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: TREE_FELLER
+          max-blocks: 96
+      attack-entity:
+        - type: WILD_CHARGE
+          cooldown: 8000
+          power: 1.4
+          damage-multiplier: 1.2
+
+  netherite_shovel:
+    material: NETHERITE_SHOVEL
+    name: "&f&lЛопата &eНезерита"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eнепробиваемая земляная линия&f."
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: DIG_3X3
+          cooldown: 6000
+          radius: 1
+          max-blocks: 8
+      right-click:
+        - type: EARTH_WALL
+          cooldown: 16000
+          width: 5
+          height: 2
+          duration: 120
+          material: BLACKSTONE
+
+  netherite_hoe:
+    material: NETHERITE_HOE
+    name: "&f&lМотыга &eНезерита"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eвечный цикл урожая&f."
+    unbreakable: true
+    enchantments:
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: HARVEST_RADIUS
+          radius: 5
+        - type: REPLANT
+      right-click:
+        - type: LIFE_BLOOM
+          cooldown: 18000
+          radius: 5
+          pulses: 5
+          health: 1.5
+
+  netherite_sword:
+    material: NETHERITE_SWORD
+    name: "&f&lКлинок &eНезерита"
+    lore:
+      - "&fКастомный инструмент серии &eSkyRelics&f."
+      - "&fОсобенность: &eфинальный удар реликвии&f."
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 5
+      DURABILITY: 3
+    abilities:
+      attack-entity:
+        - type: CHAIN_LIGHTNING
+          cooldown: 12000
+          chains: 3
+          radius: 6
+          damage: 2.5
+        - type: COMBO_STRIKE
+          trigger: 3
+          multiplier: 1.7
+          keep-ms: 5000
+      kill-entity:
+        - type: SOUL_STEAL
+          duration: 120
+          amplifier: 0
+
 relic:
   material: DIAMOND
   name: "&6&lХроно-реликвия"
