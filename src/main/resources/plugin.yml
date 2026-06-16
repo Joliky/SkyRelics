@@ -8,7 +8,7 @@ softdepend:
 
 commands:
   skyrelics:
-    description: Manage SkyRelics items and relic powers
+    description: Управление предметами SkyRelics и силами реликвий
     usage: /skyrelics <help|list|give|giveall|info|inspect|validate|abilities|cooldown|reload>
     aliases:
       - sr
@@ -16,35 +16,35 @@ commands:
 
 permissions:
   skyrelics.command:
-    description: Allows using the /skyrelics command
+    description: Разрешает использовать команду /skyrelics
     default: op
   skyrelics.command.give:
-    description: Allows giving SkyRelics items
+    description: Разрешает выдавать предметы SkyRelics
     default: op
   skyrelics.command.giveall:
-    description: Allows giving SkyRelics items to all online players
+    description: Разрешает выдавать предметы SkyRelics всем игрокам онлайн
     default: op
   skyrelics.command.list:
-    description: Allows listing configured SkyRelics items
+    description: Разрешает просматривать список настроенных предметов SkyRelics
     default: op
   skyrelics.command.info:
-    description: Allows viewing configured SkyRelics item details
+    description: Разрешает просматривать подробную информацию о предметах SkyRelics
     default: op
   skyrelics.command.inspect:
-    description: Allows inspecting held SkyRelics items
+    description: Разрешает проверять предмет SkyRelics в руке
     default: op
   skyrelics.command.validate:
-    description: Allows validating the SkyRelics config
+    description: Разрешает проверять конфигурацию SkyRelics
     default: op
   skyrelics.command.abilities:
-    description: Allows listing available SkyRelics ability types
+    description: Разрешает просматривать доступные типы способностей SkyRelics
     default: op
   skyrelics.command.cooldown:
-    description: Allows clearing SkyRelics cooldowns
+    description: Разрешает сбрасывать перезарядки SkyRelics
     default: op
   skyrelics.command.reload:
-    description: Allows reloading SkyRelics config
+    description: Разрешает перезагружать конфигурацию SkyRelics
     default: op
   skyrelics.herobrine.summoner:
-    description: Marks a player who has already summoned Herobrine
+    description: Отмечает игрока, который уже призывал Херобрина
     default: false
