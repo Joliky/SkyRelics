@@ -12,11 +12,13 @@ public class SkyRelics extends JavaPlugin {
 
     private ConfigManager configManager;
     private PermissionManager permissionManager;
+    private CooldownManager cooldownManager;
 
     @Override
     public void onEnable() {
         configManager = new ConfigManager(this);
         permissionManager = new PermissionManager(this);
+        cooldownManager = new CooldownManager();
 
         registerCommands();
         registerListeners();
@@ -40,13 +42,12 @@ public class SkyRelics extends JavaPlugin {
             return;
         }
 
-        SkyRelicsCommand skyRelicsCommand = new SkyRelicsCommand(this, configManager);
+        SkyRelicsCommand skyRelicsCommand = new SkyRelicsCommand(this, configManager, cooldownManager);
         command.setExecutor(skyRelicsCommand);
         command.setTabCompleter(skyRelicsCommand);
     }
 
     private void registerListeners() {
-        CooldownManager cooldownManager = new CooldownManager();
         getServer().getPluginManager().registerEvents(
                 new RelicListener(this, cooldownManager, configManager, permissionManager),
                 this

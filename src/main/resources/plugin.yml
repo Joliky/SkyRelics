@@ -9,7 +9,7 @@ softdepend:
 commands:
   skyrelics:
     description: Manage SkyRelics items and relic powers
-    usage: /skyrelics <help|list|give|reload>
+    usage: /skyrelics <help|list|give|giveall|info|inspect|validate|abilities|cooldown|reload>
     aliases:
       - sr
     permission: skyrelics.command
@@ -20,6 +20,27 @@ permissions:
     default: op
   skyrelics.command.give:
     description: Allows giving SkyRelics items
+    default: op
+  skyrelics.command.giveall:
+    description: Allows giving SkyRelics items to all online players
+    default: op
+  skyrelics.command.list:
+    description: Allows listing configured SkyRelics items
+    default: op
+  skyrelics.command.info:
+    description: Allows viewing configured SkyRelics item details
+    default: op
+  skyrelics.command.inspect:
+    description: Allows inspecting held SkyRelics items
+    default: op
+  skyrelics.command.validate:
+    description: Allows validating the SkyRelics config
+    default: op
+  skyrelics.command.abilities:
+    description: Allows listing available SkyRelics ability types
+    default: op
+  skyrelics.command.cooldown:
+    description: Allows clearing SkyRelics cooldowns
     default: op
   skyrelics.command.reload:
     description: Allows reloading SkyRelics config

@@ -129,6 +129,279 @@ items:
           offset-z: 0.5
           speed: 0.03
 
+  rpg_pickaxe:
+    material: DIAMOND_PICKAXE
+    name: "&b&lRPG Pickaxe"
+    lore:
+      - "&7Break ores and stone to trigger mining relic powers."
+      - "&8Works only in world below Y80."
+    worlds:
+      - world
+    gamemodes:
+      - SURVIVAL
+      - ADVENTURE
+    max-y: 80
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: VEIN_MINE
+          max-blocks: 18
+        - type: AUTO_SMELT
+          chance: 0.35
+        - type: ORE_MAGNET
+          radius: 8
+        - type: MINING_BURST
+          cooldown: 12000
+          duration: 100
+          amplifier: 1
+        - type: TUNNEL_BREAK
+          cooldown: 8000
+          radius: 1
+          max-blocks: 8
+        - type: TREASURE_CHANCE
+          chance: 0.04
+          drop: EXPERIENCE_BOTTLE
+          amount: 1
+        - type: EXPLOSIVE_MINE
+          cooldown: 15000
+          power: 1.2
+          break-blocks: false
+        - type: FORTUNE_SURGE
+          chance: 0.2
+          bonus: 1
+        - type: REPAIR_ON_ORE
+          repair: 3
+        - type: STONE_SKIN
+          cooldown: 10000
+          duration: 80
+          amplifier: 0
+
+  rpg_axe:
+    material: DIAMOND_AXE
+    name: "&c&lRPG Axe"
+    lore:
+      - "&7Chop trees and fight with berserker powers."
+      - "&8Disabled in the Nether by config example."
+    blocked-worlds:
+      - world_nether
+    gamemodes:
+      - SURVIVAL
+      - ADVENTURE
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 4
+      DIG_SPEED: 4
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: TREE_FELLER
+          max-blocks: 64
+        - type: LOG_SPLINTER
+          chance: 0.2
+          drop: STICK
+          amount: 2
+      attack-entity:
+        - type: BLEEDING_STRIKE
+          chance: 0.25
+          ticks: 4
+          damage: 1.0
+        - type: ARMOR_CRACK
+          chance: 0.25
+          duration: 100
+          amplifier: 0
+        - type: EXECUTE
+          health-percent: 0.25
+          multiplier: 1.8
+        - type: RAGE_STACKS
+          max-stacks: 5
+          damage-per-stack: 0.35
+          keep-ms: 6000
+        - type: SHIELD_BREAKER
+          multiplier: 1.5
+          shield-cooldown: 100
+        - type: WILD_CHARGE
+          cooldown: 7000
+          power: 1.5
+          damage-multiplier: 1.15
+        - type: LIFESTEAL_CHOP
+          percent: 0.18
+      right-click:
+        - type: BATTLE_ROAR
+          cooldown: 18000
+          radius: 5
+          power: 1.1
+          duration: 100
+          amplifier: 0
+
+  rpg_shovel:
+    material: DIAMOND_SHOVEL
+    name: "&6&lRPG Shovel"
+    lore:
+      - "&7Control earth, sand and paths."
+      - "&8Requires survival-style game modes."
+    gamemodes:
+      - SURVIVAL
+      - ADVENTURE
+    unbreakable: true
+    enchantments:
+      DIG_SPEED: 5
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: DIG_3X3
+          cooldown: 6000
+          radius: 1
+          max-blocks: 8
+        - type: GRAVE_DIGGER
+          chance: 0.05
+          drop: BONE
+          amount: 1
+        - type: SOIL_BLESSING
+          radius: 2
+        - type: RESOURCE_SWEEP
+          radius: 8
+        - type: MUD_ARMOR
+          cooldown: 12000
+          duration: 100
+          amplifier: 0
+      right-click:
+        - type: BURROW
+          cooldown: 12000
+          distance: 6
+        - type: QUICKSAND_TRAP
+          cooldown: 14000
+          radius: 4
+          duration: 100
+          amplifier: 2
+        - type: SAND_WAVE
+          cooldown: 10000
+          radius: 5
+          power: 1.1
+          duration: 40
+        - type: PATH_MAKER
+          cooldown: 3000
+          length: 7
+        - type: EARTH_WALL
+          cooldown: 18000
+          width: 3
+          height: 2
+          duration: 100
+          material: COBBLESTONE
+
+  rpg_hoe:
+    material: DIAMOND_HOE
+    name: "&a&lRPG Hoe"
+    lore:
+      - "&7Harvest, grow and protect with nature powers."
+      - "&8Nature relic example with biome whitelist disabled."
+    gamemodes:
+      - SURVIVAL
+      - ADVENTURE
+    biomes: []
+    unbreakable: true
+    enchantments:
+      DURABILITY: 3
+    abilities:
+      break-block:
+        - type: HARVEST_RADIUS
+          radius: 3
+        - type: REPLANT
+        - type: FARMER_LUCK
+          chance: 0.15
+          drop: WHEAT
+          amount: 1
+        - type: COMPOST_TOUCH
+          chance: 0.12
+          drop: BONE_MEAL
+          amount: 1
+      right-click:
+        - type: GROWTH_AURA
+          cooldown: 10000
+          radius: 4
+          growth: 2
+        - type: NATURE_HEAL
+          cooldown: 8000
+          radius: 5
+          health: 3.0
+        - type: VINE_ROOT
+          cooldown: 12000
+          duration: 100
+          amplifier: 4
+        - type: BEE_FRIEND
+          cooldown: 15000
+          duration: 120
+          amplifier: 0
+        - type: LIFE_BLOOM
+          cooldown: 20000
+          radius: 5
+          pulses: 5
+          health: 1.5
+      receive-damage:
+        - type: POISON_THORNS
+          chance: 0.35
+          duration: 80
+          amplifier: 0
+
+  rpg_sword:
+    material: DIAMOND_SWORD
+    name: "&d&lRPG Sword"
+    lore:
+      - "&7A complete sword relic with elemental and combo powers."
+      - "&8Combat powers require survival-style game modes."
+    gamemodes:
+      - SURVIVAL
+      - ADVENTURE
+    permission: ""
+    bind-on-first-use: true
+    owner-only: true
+    unbreakable: true
+    enchantments:
+      DAMAGE_ALL: 4
+      DURABILITY: 3
+    abilities:
+      attack-entity:
+        - type: FIRE_SLASH
+          chance: 0.18
+          fire-ticks: 100
+        - type: ICE_SLASH
+          chance: 0.18
+          duration: 80
+          amplifier: 1
+        - type: CHAIN_LIGHTNING
+          cooldown: 12000
+          chains: 3
+          radius: 6
+          damage: 3.0
+        - type: VAMPIRIC_HIT
+          percent: 0.18
+        - type: CRITICAL_DASH
+          cooldown: 7000
+          power: 1.4
+          damage-multiplier: 1.2
+        - type: AOE_SWEEP
+          cooldown: 8000
+          radius: 3
+          percent: 0.5
+        - type: FEAR
+          chance: 0.12
+          duration: 80
+          power: 0.8
+        - type: MARK_TARGET
+          cooldown: 9000
+          multiplier: 1.25
+          duration-ms: 6000
+        - type: COMBO_STRIKE
+          trigger: 3
+          multiplier: 1.8
+          keep-ms: 5000
+      kill-entity:
+        - type: SOUL_STEAL
+          duration: 120
+          amplifier: 0
+
 relic:
   material: DIAMOND
   name: "&6&lХроно-реликвия"
